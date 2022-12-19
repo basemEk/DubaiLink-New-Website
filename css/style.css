@@ -3,12 +3,18 @@
     src: url(../fonts/Neris/Neris-Light.otf);
 
 }
+
 @font-face {
     font-family: Neris;
     src: url(../fonts/Neris/Neris-Black.otf);
 
 }
 
+@font-face {
+    font-family: semiBold;
+    src: url(../fonts/Neris/Neris-SemiBold.otf);
+
+}
 
 @keyframes circle-in-top-right {
     from {
@@ -21,7 +27,7 @@
 }
 
 [transition-style="in:circle:right-center"] {
-    animation: 1s cubic-bezier(.25, 1, .30, 1) circle-in-top-right both;
+    animation: none cubic-bezier(.25, 1, .30, 1) circle-in-top-right both;
 }
 
 @keyframes fadeInUp {
@@ -41,17 +47,25 @@ body {
     font-family: Neris-Light !important;
     width: 100% !important;
     max-width: 100%;
+    background-color: #F8F8F8;
+
 }
-.GreyBodyBg{
+
+.GreyBodyBg {
     background-color: #F8F8F8;
 }
-.WhiteBodyBg{
+
+.WhiteBodyBg {
     background-color: white !important;
 }
-.GreenText{
+.col-12 {
+    padding-right: 0 !important;
+}
+.GreenText {
     color: #00808B !important;
     font-weight: bolder;
 }
+
 /********
 *********
 Navbar
@@ -69,7 +83,16 @@ nav.navbar {
     background-color: transparent;
 }
 
-nav.navbar  img.Logo  {
+nav.navbar .navbar-toggler {
+    color: white;
+    box-shadow: none !important;
+}
+
+nav.navbar .navbar-toggler svg {
+    font-size: 25px;
+}
+
+nav.navbar img.Logo {
     filter: brightness(0) invert(1);
 }
 
@@ -90,16 +113,18 @@ nav.navbar ul.navbar-nav li.nav-item {
 
 nav.navbar ul.navbar-nav li.nav-item a.nav-link {
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 22px;
     text-transform: uppercase;
     font-weight: 100;
     opacity: 80%;
 }
-nav.navbar ul.navbar-nav li.nav-item a.nav-link.active{
+
+nav.navbar ul.navbar-nav li.nav-item a.nav-link.active {
     font-weight: bolder;
     opacity: 100%;
 }
+
 nav.navbar ul.navbar-nav li.nav-item a.nav-link:hover {
     color: rgb(211, 211, 211);
 }
@@ -186,6 +211,13 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText
     color: white;
 }
 
+section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText p.PageTitle {
+    font-size: 20px;
+    line-height: 50px;
+    color: white;
+    opacity: 70%;
+    text-decoration: none;
+}
 
 section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText h1 {
     font-size: 70px;
@@ -193,6 +225,17 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText
     line-height: 70px;
     font-weight: 500;
     animation: fadeIn 5s;
+    font-family: semiBold;
+
+}
+
+section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 50px;
+    font-weight: 500;
+    animation: fadeIn 5s;
+    font-family: semiBold;
 
 }
 
@@ -205,6 +248,11 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText
     animation: fadeIn 5s;
 
 
+}
+
+section.SmallTexts .carousel .carousel-inner .carousel-item .carouselImageText p {
+    font-size: 28px;
+    line-height: 32px;
 }
 
 section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption {
@@ -222,6 +270,8 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption 
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding-bottom: 0;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
 }
 
 section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption p {
@@ -239,6 +289,7 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption 
 section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption img {
     width: 40%;
     object-fit: cover;
+
 }
 
 section.CarouselPart .carousel .carousel-control-prev {
@@ -340,28 +391,37 @@ Landing Page Contnet
 
 #carouselExampleSlidesOnly {
     filter: drop-shadow(0px 3px 6px #CBCBCB29);
+    background-color: white;
 
 }
 
 #carouselExampleSlidesOnly .carousel-inner .carousel-item {
     transition: 5s ease all !important;
-}
-#carouselExampleSlidesOnly .carousel-inner .carousel-item .row {
     background-color: white;
+
+}
+
+#carouselExampleSlidesOnly .carousel-inner .carousel-item .row {
     max-width: 100vw;
     padding: 20px 0;
 }
 
-#carouselExampleSlidesOnly .carousel-inner .carousel-item .col-md-2 {
+#carouselExampleSlidesOnly .carousel-inner .carousel-item .col-md-2 a {
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-#carouselExampleSlidesOnly .carousel-inner .carousel-item .col-md-2 img {
+#carouselExampleSlidesOnly .carousel-inner .carousel-item .col-md-2.BrandLogo {
+    justify-content: center;
+    align-items: center;
+}
+
+#carouselExampleSlidesOnly .carousel-inner .carousel-item .col-md-2 a img {
     filter: grayscale(100%);
 }
+
 
 #carouselExampleSlidesOnly .carousel-inner .carousel-item .col-md-2:hover img {
     filter: grayscale(0%);
@@ -370,11 +430,11 @@ Landing Page Contnet
 /*End Brand Carousel */
 
 /* Photo Description */
-section.LandingPage .PhotoDescription ,section.DubaiLink .PhotoDescription{
+section.LandingPage .PhotoDescription, section.DubaiLink .PhotoDescription {
     background-color: #F8F8F8;
 }
 
-section.LandingPage .PhotoDescription h4.TitleDescription, .Map h4.TitleDescription, section.DubaiLink .PhotoDescription  h4.TitleDescription,section.DubaiLink  .PhotoDescriptionNoAnim    h4.TitleDescription {
+section.LandingPage .PhotoDescription h4.TitleDescription, .Map h4.TitleDescription, section.DubaiLink .PhotoDescription h4.TitleDescription, section.DubaiLink .PhotoDescriptionNoAnim h4.TitleDescription {
     font-size: 40px;
     font-weight: bold;
     color: #00808B;
@@ -383,10 +443,12 @@ section.LandingPage .PhotoDescription h4.TitleDescription, .Map h4.TitleDescript
     opacity: 0;
 
 }
-.PhotoDescriptionNoAnim  p.Description{
+
+.PhotoDescriptionNoAnim p.Description {
     opacity: 1 !important;
 }
-.PhotoDescription p.Description{
+
+.PhotoDescription p.Description {
     font-size: 22px;
     color: #484848;
     line-height: 29px;
@@ -394,7 +456,7 @@ section.LandingPage .PhotoDescription h4.TitleDescription, .Map h4.TitleDescript
 }
 
 section.LandingPage .PhotoDescription img {
-    opacity: 0;
+    opacity: 0 ;
 }
 
 .animated {
@@ -468,7 +530,7 @@ section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails {
     position: absolute;
     left: 0%;
     bottom: 0%;
-    background-image: linear-gradient(  #00000000, #000000);
+    background-image: linear-gradient(#00000000, #000000);
     text-decoration: none;
     width: 100%;
     padding: 40px;
@@ -548,9 +610,6 @@ section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails p {
 
 .Map h4.TitleDescription {
     color: white;
-    position: absolute;
-    top: 15%;
-    left: 5%;
 }
 
 .Map .MapBG {
@@ -632,7 +691,6 @@ section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails p {
 
 .NewsLetter h5 {
     color: white;
-    font-size: 25px;
     font-size: 32px;
     text-transform: uppercase;
     font-weight: bold;
@@ -693,7 +751,7 @@ End Landing Page Contnet
 Dubai Link 
 *********
 **********/
-#TextCarousel,#TextCarouselNIU{
+#TextCarousel, #TextCarouselNIU {
     position: absolute;
     top: 25%;
     right: 0%;
@@ -701,70 +759,80 @@ Dubai Link
     width: 50%;
 }
 
-#TextCarousel .carousel-item,#TextCarouselNIU .carousel-item{
+#TextCarousel .carousel-item, #TextCarouselNIU .carousel-item {
     background-color: white;
     padding: 35px;
     width: 100%;
     border-radius: 12px;
-    filter:drop-shadow(0px 3px 6px #81818129);
+    filter: drop-shadow(0px 3px 6px #81818129);
     height: 700px;
 }
-#TextCarousel .carousel-item p.Description,#TextCarouselNIU .carousel-item p.Description{
+
+#TextCarousel .carousel-item p.Description, #TextCarouselNIU .carousel-item p.Description {
     animation: none !important;
     transition: none !important;
     font-size: 22px;
     color: #484848;
     line-height: 29px;
-    
+
 }
 
-p.Description img{
-    filter: brightness(0);
-    width: 0px;
+p.Description img {
+    filter: brightness(0) !important;
+    width: 0px !important;
 }
-p.Description:hover img{
+
+p.Description:hover img {
     width: 25px !important;
 }
-p.Description span{
+
+p.Description span {
     color: #E53B5F;
     display: none;
 }
-p.Description:hover span{
+
+p.Description:hover span {
     display: inline-block;
 }
 
-#carouselDubai .carousel-control-prev,#carouselDubai .carousel-control-next,#carouselNIU .carousel-control-prev ,#carouselNIU .carousel-control-next{
-    height: fit-content ;
-    left: 95%;
+#carouselDubai .carousel-control-prev, #carouselDubai .carousel-control-next, #carouselNIU .carousel-control-prev, #carouselNIU .carousel-control-next {
+    height: fit-content;
+    left: 85%;
     width: 20%;
     opacity: 1 !important;
     z-index: 100;
 }
 
-#carouselDubai .carousel-control-prev ,#carouselNIU .carousel-control-prev{
+#carouselDubai .carousel-control-prev, #carouselNIU .carousel-control-prev {
     top: 90%;
 
 }
-#carouselDubai .carousel-control-next,#carouselNIU .carousel-control-next{
+
+#carouselDubai .carousel-control-next, #carouselNIU .carousel-control-next {
     top: 75%;
 }
- h3.SubTitle{
+
+h3.SubTitle {
     font-size: 25px;
     line-height: 34px;
     color: #00808B;
     font-weight: bolder;
 
 }
+
 section.DubaiLink .PhotoDescription .servicesCarousel {
     width: 100%;
 }
-section.DubaiLink .PhotoDescription .servicesCarousel img{
+
+section.DubaiLink .PhotoDescription .servicesCarousel img {
     width: 50%;
 
 }
-#carouselDubai .carousel-item,#TextCarousel .carousel-item, #carouselNIU .carousel-item,#TextCarouselNIU .carousel-item{
+
+#carouselDubai .carousel-item, #TextCarousel .carousel-item, #carouselNIU .carousel-item, #TextCarouselNIU .carousel-item {
     transition: 0.3s ease all;
 }
+
 /********
 *********
 End Dubai Link 
@@ -777,75 +845,112 @@ End Dubai Link
 About Page
 *********
 **********/
-section.CarouselPart #AboutCarousel .carousel-inner .carousel-item {
+section.CarouselPart #AboutCarousel .carousel-inner .carousel-item, section.CarouselPart #STSCarousel .carousel-inner .carousel-item, section.CarouselPart #TravelCarousel .carousel-inner .carousel-item, section.CarouselPart #Hospitality .carousel-inner .carousel-item, section.CarouselPart #DestinationRep .carousel-inner .carousel-item,section.CarouselPart #Royal .carousel-inner .carousel-item {
     height: 100vh;
 }
-section.CarouselPart #AboutCarousel .carousel-inner .carousel-item .overlay{
+
+section.CarouselPart #AboutCarousel .carousel-inner .carousel-item .overlay, section.CarouselPart #STSCarousel .carousel-inner .carousel-item .overlay, section.CarouselPart #TravelCarousel .carousel-inner .carousel-item .overlay, section.CarouselPart #Hospitality .carousel-inner .carousel-item .overlay, section.CarouselPart #DestinationRep .carousel-inner .carousel-item .overlay,section.CarouselPart #Royal .carousel-inner .carousel-item .overlay {
     height: 100%;
 }
-section.CarouselPart #AboutCarousel #carousel-item-one{
+
+section.CarouselPart #AboutCarousel #carousel-item-one {
     background-image: url(../images/Aboutbanner.png);
 }
 
-.infromativeSliderAbout{
+section.CarouselPart #TravelCarousel #carousel-item-one {
+    background-image: url(../images/TravelAndTourism.png);
+}
+
+section.CarouselPart #Hospitality #carousel-item-one {
+    background-image: url(../images/HospitalityBaner.png);
+
+}
+
+section.CarouselPart #STSCarousel #carousel-item-one {
+    background-image: url(../images/STSBAner.png);
+
+}
+
+section.CarouselPart #DestinationRep #carousel-item-one {
+    background-image: url(../images/One.png);
+
+}
+section.CarouselPart #Royal #carousel-item-one {
+    background-image: url(../images/Royallifestyle.png);
+
+}
+section.CarouselPart #Carousel #carousel-item-one {}
+
+.infromativeSliderAbout {
     padding-bottom: 20px;
 }
+
 .infromativeSliderAbout .carousel-cell {
     width: 30%;
     margin-right: 10px;
     border-radius: 5px;
     counter-increment: carousel-cell;
 }
-  .infromativeSliderAbout .position-relative{
+
+.infromativeSliderAbout .position-relative {
     height: 20% !important;
-  }
-  .infromativeSliderAbout:before{
+}
+
+.infromativeSliderAbout:before {
     display: none;
-  }
-  .infromativeSliderAbout .card {
+}
+
+.infromativeSliderAbout .card {
     background-color: white;
     border-radius: 12px;
     filter: drop-shadow(0px 3px 6px #81818129);
     border: none;
     border-radius: 12px;
 
-  }
-  .infromativeSliderAbout .card .card-body{
+}
+
+.infromativeSliderAbout .card .card-body {
     background-color: white;
     text-align: center;
     height: 100%;
     border-radius: 12px;
-  }
-  .infromativeSliderAbout .card .imgbg{
+}
+
+.infromativeSliderAbout .card .imgbg {
     width: 100%;
     background-color: transparent;
-    margin: auto;  
+    margin: auto;
     display: flex;
     border-radius: 12px;
 
     background-color: white;
 }
-  .infromativeSliderAbout .card img{
+
+.infromativeSliderAbout .card img {
     width: 35%;
     border-radius: 5px;
-margin: auto;
-  }
-  .infromativeSliderAbout  .card .card-body .card-title{
+    margin: auto;
+}
+
+.infromativeSliderAbout .card .card-body .card-title {
     color: #00808B;
     font-size: 25px;
     line-height: 34px;
     font-weight: bold;
     text-transform: uppercase;
 
-  }
-  .infromativeSliderAbout .card .card-body .card-text{
-    color:#00808B ;
-    font-size: 22px;
-    line-height: 29px;  
 }
+
+.infromativeSliderAbout .card .card-body .card-text {
+    color: #00808B;
+    font-size: 22px;
+    line-height: 29px;
+}
+
 section.LeaderShipCarousel .carousel-cell {
     height: fit-content;
 }
+
 section.LeaderShipCarousel .carousel-cell .card {
     background-color: transparent;
     border-radius: 20px;
@@ -853,18 +958,21 @@ section.LeaderShipCarousel .carousel-cell .card {
     border: none;
     padding: 20px;
 }
-section.LeaderShipCarousel .carousel-cell .card .card-body{
-    background-color:#323232 ;
+
+section.LeaderShipCarousel .carousel-cell .card .card-body {
+    background-color: #323232;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
 
 }
-section.LeaderShipCarousel .carousel-cell .card .card-body .card-title{
+
+section.LeaderShipCarousel .carousel-cell .card .card-body .card-title {
     font-size: 32px;
     font-weight: bold;
     line-height: 31px;
 }
-section.LeaderShipCarousel .carousel-cell .card .card-body .card-text{
+
+section.LeaderShipCarousel .carousel-cell .card .card-body .card-text {
     font-size: 21px;
     line-height: 30px;
     opacity: 0.8;
@@ -882,26 +990,32 @@ End About Page
 GTE Page
 *********
 **********/
- .PhotoDescription a{
+.PhotoDescription a {
     text-decoration: none !important;
 }
-section.GTE .infromativeSliderAbout .card img{
+
+section.GTE .infromativeSliderAbout .card img {
     width: 25%;
 }
-section.GTE .infromativeSliderAbout .card .CardHeight{
+
+section.GTE .infromativeSliderAbout .card .CardHeight {
     height: 60%;
 }
-section.GTE .infromativeSliderAbout .card .card-body{
+
+section.GTE .infromativeSliderAbout .card .card-body {
     min-height: unset;
     height: unset;
 }
-section.GTE .infromativeSliderAbout .card .card-body .card-text{
+
+section.GTE .infromativeSliderAbout .card .card-body .card-text {
     font-size: 20px;
     font-weight: lighter;
 }
-section.GTE .infromativeSliderAbout{
+
+section.GTE .infromativeSliderAbout {
     height: unset;
 }
+
 /********
 *********
 End GTE Page
@@ -916,20 +1030,24 @@ Royal Page
 **********/
 
 
-section.Royale .infromativeSliderAbout .card .CardHeight{
+section.Royale .infromativeSliderAbout .card .CardHeight {
     height: 75%;
 }
-section.Royale .infromativeSliderAbout .card .card-body{
+
+section.Royale .infromativeSliderAbout .card .card-body {
     min-height: unset;
     height: unset;
 }
-section.Royale .infromativeSliderAbout .card .card-body .card-text{
+
+section.Royale .infromativeSliderAbout .card .card-body .card-text {
     font-size: 20px;
     font-weight: lighter;
 }
-section.Royale .infromativeSliderAbout{
+
+section.Royale .infromativeSliderAbout {
     height: unset;
 }
+
 /********
 *********
 End Royal Page
@@ -939,18 +1057,39 @@ End Royal Page
 /*********
 STS
 **********/
-section.STS .PhotoDescription p.Description{
+section.STS .PhotoDescription p.Description {
     font-size: 20px;
 }
-section.STS .card{
+
+section.STS .card {
     border: none;
-    border-radius: 12px ;
+    border-radius: 12px;
     filter: drop-shadow(0px 3px 6px #81818129);
     height: 231px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+.NavTabs {
+    justify-content: space-between;
+    border: none;
+}
+.NavTabs .nav-item .nav-link {
+    font-size: 40px !important;
+    color: #00808B !important;
+    box-shadow: none !important;
+}
+.NavTabs .nav-item .nav-link.active{
+    font-weight: bolder;
+  
+}
+.NavTabs .nav-item .nav-link.active, .nav-item .nav-item.show .nav-link{
+    border: none !important;
+}
+ .tab-content{
+    text-align: center;
+    border-top: none !important;
+} 
 /*********
 End STS 
 ***********/
@@ -958,13 +1097,14 @@ End STS
 /*********
 Tripstick
 ***********/
-section.Tripstik  .PhotoDescription .card{
+section.Tripstik .PhotoDescription .card {
     border: none;
     border-radius: 12px;
     filter: drop-shadow(0px 3px 6px #81818129);
     min-height: 324px;
 }
-section.Tripstik  .PhotoDescription .card .card-title{
+
+section.Tripstik .PhotoDescription .card .card-title {
     color: #E53B5F;
     font-size: 100px;
     text-shadow: 0px 3px 6px #00000029;
@@ -972,13 +1112,15 @@ section.Tripstik  .PhotoDescription .card .card-title{
     font-size: bolder;
     font-family: Neris;
 }
-section.Tripstik  .PhotoDescription .card .card-text{
+
+section.Tripstik .PhotoDescription .card .card-text {
     color: #E53B5F;
     font-size: 25px;
     line-height: 34px;
     font-weight: bolder;
 }
-section.Tripstik  .PhotoDescription .card .card-details{
+
+section.Tripstik .PhotoDescription .card .card-details {
     color: #484848;
     font-size: 25px;
     line-height: 34px;
@@ -996,10 +1138,11 @@ End Tripstick
 /*********
  NIU
 ***********/
-section.NIU   iframe{
+section.NIU iframe {
     height: 80vh;
     width: 100%;
 }
+
 /*********
 End NIU
 ***********/
@@ -1007,15 +1150,274 @@ End NIU
 /***************************
 ************Media *********
 ****************************/
-@media (min-width: 991px){
+@media (min-width: 991px) {}
 
-}
-@media (min-width: 768px){
+@media (max-width:767px) {}
 
-}
-@media (min-width: 991px){
+@media (max-width: 575px) {
+    section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText h1 {
+        font-size: 50px;
+        margin-left: 20px;
+        line-height: 50px;
+    }
 
-}
-@media (min-width: 768px){
+    section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText p {
+        font-size: 20px;
+        margin-left: 20px;
+        line-height: 25px;
+    }
 
+    section.CarouselPart .carousel .input-group {
+        width: 85%;
+        top: 18%;
+    }
+
+    section.CarouselPart .carousel .input-group input {
+        font-size: 11px;
+    }
+
+    section.CarouselPart .carousel .carousel-control-prev, section.CarouselPart .carousel .carousel-control-next {
+        top: 75% !important;
+        right: unset;
+
+        transform: translateX(-50%);
+    }
+
+    section.CarouselPart .carousel .carousel-control-prev img, section.CarouselPart .carousel .carousel-control-next img {
+        width: 40px;
+    }
+
+    section.CarouselPart .carousel .carousel-control-prev p, section.CarouselPart .carousel .carousel-control-next p {
+        font-size: 20px;
+    }
+
+    section.CarouselPart .carousel .carousel-control-prev {
+        left: 75%;
+    }
+
+    section.CarouselPart .carousel .carousel-control-next {
+        left: 25%;
+    }
+
+    nav.navbar ul.navbar-nav {
+        text-align: center;
+    }
+
+    nav.navbar .NavSocial {
+        justify-content: center;
+    }
+
+    nav.navbar .navbar-collapse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #121212 !important;
+        padding-top: 100px;
+    }
+
+    nav.navbar .navbar-collapse .navbar-toggler {
+        position: absolute;
+        right: 3%;
+        top: 2%;
+    }
+
+    nav.navbar ul.navbar-nav li.nav-item a.nav-link {
+        font-size: 20px;
+        line-height: 30px;
+        opacity: 100%;
+        margin-bottom: 20px;
+    }
+
+    section.LandingPage .PhotoDescription h4.TitleDescription, .Map h4.TitleDescription, section.DubaiLink .PhotoDescription h4.TitleDescription, section.DubaiLink .PhotoDescriptionNoAnim h4.TitleDescription {
+        font-size: 32px;
+        text-align: center;
+        line-height: 33px;
+        margin: 20px !important;
+        padding-bottom: 15px !important;
+    }
+
+    .PhotoDescription p.Description {
+        font-size: 17px;
+        text-align: center;
+        line-height: 20px;
+        margin-bottom: 15px !important;
+    }
+
+    #carouselExampleSlidesOnly .carousel-inner .carousel-item .row {
+        height: 130px;
+    }
+
+    #carouselExampleSlidesOnly .carousel-inner .carousel-item .col-md-2 a img {
+        width: 60%;
+    }
+
+    #carouselExampleSlidesOnly .carousel-inner .carousel-item .col-md-2 a img.RLF {
+        width: 40%;
+    }
+
+    section.LandingPage .PhotoDescription img {
+        margin: auto;
+        width: 70% !important;
+    }
+
+    section.SmallTexts .carousel .carousel-inner .carousel-item .carouselImageText p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText h2 {
+        font-size: 30px;
+        margin-left: 20px;
+
+    }
+
+    section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText p.PageTitle {
+        margin-left: 20px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    section.LandingPage .infromativeSlider .carousel-cell {
+        height: 20vh;
+    }
+
+    .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+        height: 150px;
+    }
+
+    section.LandingPage .infromativeSlider .carousel-cell {
+        min-height: unset;
+    }
+
+    h3.SubTitle {
+        text-align: center;
+    }
+
+    #TextCarousel, #TextCarouselNIU {
+        position: unset;
+        width: 100%;
+    }
+
+    section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails {
+        padding: 14px;
+
+    }
+
+    section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails button {
+        font-size: 14px;
+    }
+
+    section.LandingPage .infromativeSlider .carousel-cell .overlay {
+        padding: 3px 0;
+    }
+
+    .NewsLetter h5 {
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .NewsLetter button.btn-primary {
+        margin-top: 15px;
+    }
+
+    section.NIU iframe {
+        height: 25vh;
+        width: 97%;
+        margin-bottom: 25px;
+    }
+
+    #TextCarousel .carousel-item, #TextCarouselNIU .carousel-item {
+        height: 300px;
+        text-align: center;
+        padding: 5px;
+        filter:unset;
+        background-color: transparent;
+        margin-top: 15px;
+
+    }
+    #carouselDubai .carousel-item img, #TextCarousel .carousel-item img, #carouselNIU .carousel-item img, #TextCarouselNIU .carousel-item img {
+        width: 70%;
+        margin: auto;
+    }
+
+    #carouselDubai .carousel-control-prev, #carouselDubai .carousel-control-next, #carouselNIU .carousel-control-prev, #carouselNIU .carousel-control-next {
+        left: unset;
+        width: 30%;
+    }
+
+    #carouselDubai .carousel-control-prev img, #carouselDubai .carousel-control-next img, #carouselNIU .carousel-control-prev img, #carouselNIU .carousel-control-next img {
+        width: 50%;
+    }
+
+    #TextCarousel .carousel-item p.Description, #TextCarouselNIU .carousel-item p.Description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    #carouselDubai .carousel-control-prev, #carouselNIU .carousel-control-prev, #carouselDubai .carousel-control-next, #carouselNIU .carousel-control-next {
+
+        top: 85%;
+    }
+    section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails p {
+    font-size: 13px;
+    margin-bottom: 10px;
+    }
+    section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails button div {
+        width: 20px;
+        height: 20px;
+    }
+    section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails button div svg {
+        font-size: 12px;
+    }
+    .infromativeSliderAbout .carousel-cell{
+        width: 66%;
+    }
+    .infromativeSliderAbout .card .card-body .card-title{
+        font-size: 20px;
+        
+    }
+    .infromativeSliderAbout .card .card-body .card-text{
+        font-size: 16px;
+        line-height: 29px;
+    }
+    .infromativeSliderAbout .card .card-body {
+        height: 160px;
+    }
+    section.LeaderShipCarousel .carousel-cell{
+        width: 66%;
+    }
+    section.LeaderShipCarousel .carousel-cell .card .card-body {
+        padding: 15px !important;
+    }
+    section.LeaderShipCarousel .carousel-cell .card .card-body .card-title {
+    font-size: 20px;
+    }
+    section.LeaderShipCarousel .carousel-cell .card .card-body .card-text {
+    font-size: 15px;
+    margin-bottom: 0;
+    }
+    .NavSocial {
+        margin-top: 10px !important;
+    }
+    section.LeaderShipCarousel .carousel-cell .card {
+        padding: 10px;
+    }
+    .BanerLink.PhotoDescription p.Description{
+        text-align: left !important;
+
+    }
+    .BanerLink.PhotoDescription p.Description img{
+        filter: brightness(100%) invert(0%) !important;
+        display: inline-block;
+    }
+    section.Royale .infromativeSliderAbout .card .card-body .card-text,section.GTE .infromativeSliderAbout .card .card-body .card-text{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .PhotoDescription p.Description img {
+        display: none;
+    }
 }
