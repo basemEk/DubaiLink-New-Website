@@ -113,7 +113,7 @@ nav.navbar ul.navbar-nav li.nav-item {
 
 nav.navbar ul.navbar-nav li.nav-item a.nav-link {
     color: white;
-    font-size: 14px;
+    font-size: 11x;
     line-height: 22px;
     text-transform: uppercase;
     font-weight: 100;
@@ -213,6 +213,7 @@ section.SmallTexts .carousel .carousel-inner .carousel-item .overlay {
 section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText {
     z-index: 3;
     color: white;
+    padding-top: 70px;
 }
 
 section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText p.PageTitle {
@@ -339,7 +340,7 @@ section.CarouselPart .carousel .carousel-control-next {
 section.CarouselPart .carousel .input-group {
     position: absolute;
     width: 50%;
-    top: 15%;
+    top: 17%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -1175,7 +1176,7 @@ End NIU
 Packages
 ********/
 .PackCards img{
-    
+
 }
 
 
