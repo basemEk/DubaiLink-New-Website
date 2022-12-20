@@ -203,18 +203,18 @@ $(document).ready(function () {
 });
 /*Map Hover*/
 
-jQuery('.MapIndex0').mouseenter(function () {
-   jQuery('.DetailsOne').css({ "display": "block" });
+jQuery('.Spain').mouseenter(function () {
+   jQuery('.SpainContent').css({ "display": "block" });
 });
-jQuery('.MapIndex0').mouseleave(function () {
-   jQuery('.DetailsOne').css({ "display": "none" });
+jQuery('.Spain').mouseleave(function () {
+   jQuery('.SpainContent').css({ "display": "none" });
 });
 
-jQuery('.MapIndex1').mouseenter(function () {
-   jQuery('.DetailsTwo').css({ "display": "block" });
+jQuery('.Dubai').mouseenter(function () {
+   jQuery('.DubaiContent').css({ "display": "block" });
 });
-jQuery('.MapIndex1').mouseleave(function () {
-   jQuery('.DetailsTwo').css({ "display": "none" });
+jQuery('.Dubai').mouseleave(function () {
+   jQuery('.DubaiContent').css({ "display": "none" });
 });
 
 jQuery('.MapIndex2').mouseenter(function () {

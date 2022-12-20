@@ -166,6 +166,10 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .overlay {
     position: relative;
 
 }
+section.SmallTexts .carousel .carousel-inner .carousel-item .overlay {
+    align-items: end;
+    padding-bottom: 70px;
+}
 
 #wraper .overlay {
     background-image: url(../images/OVERLAY.png);
@@ -251,15 +255,16 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText
 }
 
 section.SmallTexts .carousel .carousel-inner .carousel-item .carouselImageText p {
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 22px;
+    line-height: 23px;
 }
 
 section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption {
     width: 15%;
-    height: 20%;
-    right: 50%;
+    height: fit-content;
     transform: translateX(50%);
+
+    right: 50%;
     left: unset;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.205);
@@ -270,9 +275,22 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption 
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding-bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, .25);
+} 
+section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption::before {
+    content: "";
+    position: absolute;
+    top: -15px; /* -blur */ 
+    left: -15px; /* -blur */
+    width: calc(100% + 16px); /* 100% + blur * 2 */
+    height: calc(100% + 16px); /* 100% + blur * 2 */
+    background-image: linear-gradient(#00000080, rgba(0, 0, 0, 0.5)); /* change color or image here */
+    background-position: 50%;
     filter: blur(8px);
-    -webkit-filter: blur(8px);
-}
+    z-index: -1;
+  }
 
 section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption p {
     font-size: 14px;
@@ -602,85 +620,89 @@ section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails p {
 
 /* Map Part */
 .Map {
-    background-color: #313131;
-    opacity: 0.94;
+    background-color: #313131e8;
     position: relative;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/MAP.svg); 
+    background-size: cover;
+    background-position: right top;
+
+    height: 100vh;
+    background-repeat: no-repeat;
 }
 
 .Map h4.TitleDescription {
-    color: white;
-}
-
-.Map .MapBG {
-    width: 100%;
-    height: 100%;
-
-}
-
-.Map .MapIndex0 {
-    top: 45%;
-    left: 50%;
+    color: white !important;
+    text-align:  center !important;
+    text-shadow: 1px 4px 6px rgba(0, 0, 0, 0.877);
     position: absolute;
-    transform: translate(-50%, -50%);
+    top: 5%;
+    right: 5%;
+    
+}
+.Map .Spain,.Map .Dubai{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    background-color: blue;
+    transform: translateX(-50%);
+    top: 10%;
+    left: 30%;
+    opacity: 0;
+}
+.Map .Dubai{
+    top: 50%;
+    left: unset;
+    right: 10%;
+    transform: translateY(-50%);
+ 
+
 }
 
-.Map .MapIndex1 {
-    top: 55%;
-    left: 45%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-}
 
-.Map .MapIndex2 {
-    top: 53%;
-    left: 47%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-}
-
-.Map .MapIndex3 {
-    top: 57%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-}
-
-.Map .MapIndex4 {
-    top: 52%;
-    left: 54%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-}
-
-.Map .MapIndex5 {
-    top: 60%;
-    left: 48%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-}
 
 .Detail {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    filter: drop-shadow(0px 3px 6px #00000029);
-    color: #2A7076;
+    filter: drop-shadow(0px 3px 6px #000000d0);
+    color: #666666;
     font-size: 16px;
     line-height: 25px;
-    width: 350px;
+    width: 400px;
     height: fit-content;
     font-weight: bold;
-    position: absolute;
-    top: 35%;
-    left: 5%;
-    display: none;
+    padding: 20px;   
 }
 
 .Detail svg {
     color: #000000;
     font-size: 16px;
 }
-
+.SpainContent{
+    display: none;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+}
+.DubaiContent{
+    font-size: 14px !important;
+    line-height: 19px;
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+    width: 40%;
+    display: none;
+}
+.DubaiContent .col-12{
+    margin-bottom: 20px;
+}
+.DubaiContent img{
+    width: 50% !important;
+}
+.DubaiContent .RLFImg{
+    width: 25% !important;
+}
 /*End  Map Part */
 
 /*Newsletter*/
@@ -845,14 +867,16 @@ End Dubai Link
 About Page
 *********
 **********/
-section.CarouselPart #AboutCarousel .carousel-inner .carousel-item, section.CarouselPart #STSCarousel .carousel-inner .carousel-item, section.CarouselPart #TravelCarousel .carousel-inner .carousel-item, section.CarouselPart #Hospitality .carousel-inner .carousel-item, section.CarouselPart #DestinationRep .carousel-inner .carousel-item,section.CarouselPart #Royal .carousel-inner .carousel-item {
+section.CarouselPart #AboutCarousel .carousel-inner .carousel-item, section.CarouselPart #STSCarousel .carousel-inner .carousel-item, section.CarouselPart #TravelCarousel .carousel-inner .carousel-item, section.CarouselPart #Hospitality .carousel-inner .carousel-item, section.CarouselPart #DestinationRep .carousel-inner .carousel-item,section.CarouselPart #Royal .carousel-inner .carousel-item,section.CarouselPart #PackageMain .carousel-inner .carousel-item {
     height: 100vh;
 }
 
-section.CarouselPart #AboutCarousel .carousel-inner .carousel-item .overlay, section.CarouselPart #STSCarousel .carousel-inner .carousel-item .overlay, section.CarouselPart #TravelCarousel .carousel-inner .carousel-item .overlay, section.CarouselPart #Hospitality .carousel-inner .carousel-item .overlay, section.CarouselPart #DestinationRep .carousel-inner .carousel-item .overlay,section.CarouselPart #Royal .carousel-inner .carousel-item .overlay {
+section.CarouselPart #AboutCarousel .carousel-inner .carousel-item .overlay, section.CarouselPart #STSCarousel .carousel-inner .carousel-item .overlay, section.CarouselPart #TravelCarousel .carousel-inner .carousel-item .overlay, section.CarouselPart #Hospitality .carousel-inner .carousel-item .overlay, section.CarouselPart #DestinationRep .carousel-inner .carousel-item .overlay,section.CarouselPart #Royal .carousel-inner .carousel-item .overlay,section.CarouselPart #PackageMain .carousel-inner .carousel-item .overlay {
     height: 100%;
 }
-
+section.CarouselPart #PackageMain #carousel-item-one{
+    background-image: url(../images/Packagesbanner.png);
+}
 section.CarouselPart #AboutCarousel #carousel-item-one {
     background-image: url(../images/Aboutbanner.png);
 }
@@ -1147,22 +1171,34 @@ section.NIU iframe {
 End NIU
 ***********/
 
+/******
+Packages
+********/
+.PackCards img{
+    
+}
+
+
 /***************************
 ************Media *********
 ****************************/
+@media (min-width: 2000px) {
+    .Map {
+    }
+}
 @media (min-width: 991px) {}
 
 @media (max-width:767px) {}
 
 @media (max-width: 575px) {
     section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText h1 {
-        font-size: 50px;
+        font-size: 35px;
         margin-left: 20px;
-        line-height: 50px;
+        line-height: 40px;
     }
 
     section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText p {
-        font-size: 20px;
+        font-size: 17px;
         margin-left: 20px;
         line-height: 25px;
     }
@@ -1270,7 +1306,7 @@ End NIU
     section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText h2 {
         font-size: 30px;
         margin-left: 20px;
-
+        line-height: 35px;
     }
 
     section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText p.PageTitle {
@@ -1419,5 +1455,16 @@ End NIU
     }
     .PhotoDescription p.Description img {
         display: none;
+    }
+    section.Tripstik .PhotoDescription .card .card-title{
+        font-size: 45px;
+        line-height: 60px;
+    }
+    section.Tripstik .PhotoDescription .card .card-text,section.Tripstik .PhotoDescription .card .card-details{
+        font-size: 12px;
+        line-height: 16px;
+    }
+    section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption{
+        width: 35%;
     }
 }
