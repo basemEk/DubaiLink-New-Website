@@ -2,356 +2,434 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/bootstrap.css">
-  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/transition-style">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Packages</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/transition-style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Packages</title>
 </head>
 
 <body>
-  <div class="GreyBodyBg">
-     <!--Navbar-->
-     <nav class="navbar navbar-expand-lg  justify-content-between fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/DLGLogofullColor.svg" alt="Logo" class="Logo">
-        </a>
-        <button class="navbar-toggler mt-4 float-end" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fa-solid fa-x"></i>
-                  </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <button class="navbar-toggler mt-4 float-end" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <i class="fa-solid fa-x"></i>
+    <div class="GreyBodyBg">
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg  justify-content-between fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/DLGLogofullColor.svg" alt="Logo" class="Logo">
+                </a>
+                <button class="navbar-toggler mt-4 float-end" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+ 
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <button class="navbar-toggler mt-4 float-end" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-x"></i>
                     </button>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link " href="About.html">About</a>
-                      </li>
-                 
-                      <li class="nav-item">
-                        <a class="nav-link " href="TravelAndTourism.html">Travel & Tourism</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link " href="Hospitality.html">Hospitality</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="STS.html">STS</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="DestinationRep.html">Destination Representation</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link " href="RoyalLifeStyle.html">Royale LifeStyle</a>
-                      </li>
-          
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="About.html">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link " href="TravelAndTourism.html">Travel & Tourism</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="Hospitality.html">Hospitality</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="STS.html">STS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="DestinationRep.html">Destination Representation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="RoyalLifeStyle.html">Royale LifeStyle</a>
+                        </li>
+
                     </ul>
-          <div class="d-flex NavSocial">
-            <img src="images/facebook-app-symbol.png" alt="facebook" class="me-3">
-            <img src="images/twitter.png" alt="twitter" class="me-3">
-            <img src="images/instagram.png" alt="instagram" class="me-3">
-            <img src="images/youtube.png" alt="youtube" class="me-3">
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!--End Navbar-->
-    <section class="CarouselPart" id="CarouselPart">
-      <div id="PackageMain" class="carousel carousel-fade" data-interval="false">
-        <div class="carousel-inner">
-          <div class="carousel-item  active" id="carousel-item-one">
-            <div class="overlay">
-              <div class="container">
-                <div class="carouselImageText">
-                   
-                  <h2 class="animate__animated animate__fadeIn">
-                    TRAVEL TO 
-                    <br>
-                    THE MOST 
-                    <br>
-                    BEAUTIFUL PLACES
-                    <br>
-                    IN THE WORLD
-                  </h2>
-        
+                    <div class="d-flex NavSocial">
+                        <img src="images/facebook-app-symbol.png" alt="facebook" class="me-3">
+                        <img src="images/twitter.png" alt="twitter" class="me-3">
+                        <img src="images/instagram.png" alt="instagram" class="me-3">
+                        <img src="images/youtube.png" alt="youtube" class="me-3">
+                    </div>
                 </div>
-              </div>
-            
             </div>
-          </div>
+        </nav>
+        <!--End Navbar-->
+        <section class="CarouselPart" id="CarouselPart">
+            <div id="PackageMain" class="carousel carousel-fade" data-interval="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item  active" id="carousel-item-one">
+                        <div class="overlay">
+                            <div class="container">
+                                <div class="carouselImageText">
 
-        </div>
-        <div class="input-group mx-auto">
-          <div class="inputSearch w-100">
-            <input type="search" class="form-control " placeholder="Search for your favorite destinations & packages"
-              aria-label="search" aria-describedby="basic-addon1">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-        </div>
-      </div>
-    </section>
+                                    <h2 class="animate__animated animate__fadeIn">
+                                        TRAVEL TO
+                                        <br>
+                                        THE MOST
+                                        <br>
+                                        BEAUTIFUL PLACES
+                                        <br>
+                                        IN THE WORLD
+                                    </h2>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="input-group mx-auto">
+                    <div class="inputSearch w-100">
+                        <input type="search" class="form-control "
+                            placeholder="Search for your favorite destinations & packages" aria-label="search"
+                            aria-describedby="basic-addon1">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
- <!--Package COntent-->
- <section class="LandingPage GreyBodyBg" id="LandingPage">
-    
+        <!--Package COntent-->
+        <section class="LandingPage GreyBodyBg" id="LandingPage">
 
 
-    <div class="container">
-      <!--Photo Description-->
-      <div class="row PhotoDescription py-md-5 py-2  w-100">
-        <div class="col-lg-5 mt-md-3  pt-5 pe-md-4 d-flex flex-column justify-content-center">
-          <h4 class="TitleDescription mb-4 ">
-            REIMAGINE YOUR NEXT <br> EXPERIENCE
+
+            <div class="container">
+                <!--Photo Description-->
+                <div class="row PhotoDescription py-md-5 py-2  w-100">
+                    <div class="col-lg-5 mt-md-3  pt-5 pe-md-4 d-flex flex-column justify-content-center">
+                        <h4 class="TitleDescription mb-4 ">
+                            REIMAGINE YOUR NEXT <br> EXPERIENCE
+                        </h4>
+                        <p class="Description  mb-4">
+                            The next step of your trip starts today take a look at
+                            <br>
+                            some of our featured destinations for ideas to
+                            <br>
+                            add to your bucket list
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="row PackCards pb-5">
+                    <div class="col-md-4 col-6 mb-md-5 mb-2 position-relative">
+                        <div class="overlay">
+                        <img src="images/Pack1.png" alt="" class="w-100 h-100">
+                        <div class="price">
+                            <div class="from">
+                                from
+                            </div>
+                         $398
+                        </div>
+                
+                        <p>PRAGUE– VIENNA– BUDAPEST</p>
+                        <a class="MoreDetails">
+                            More Details <img src="images/Dragdownarrow.png" alt="" class="ms-3">
+                        </a>
+                    </div>
+                    </div>
+                    <div class="col-md-4 col-6  mb-md-5  mb-2 position-relative">
+                        <div class="overlay">
+                        <img src="images/Pack2.png" alt="" class="w-100 h-100">
+                        <div class="price">
+                            <div class="from">
+                                from
+                            </div>
+                         $251
+                        </div>
+                        <p>ARMENIA</p>
+                        <a class="MoreDetails">
+                            More Details <img src="images/Dragdownarrow.png" alt="" class="ms-3">
+                        </a>
+                    </div>
+                    </div>
+                    <div class="col-md-4 col-6  mb-md-5  mb-2 position-relative">
+                        <div class="overlay">
+                        <img src="images/Pack3.png" alt="" class="w-100 h-100">
+                        <div class="price">
+                            <div class="from">
+                                from
+                            </div>
+                         $1450
+                        </div>
+                        <p>SPAIN & PORTUGAL</p>
+                        <a class="MoreDetails">
+                            More Details <img src="images/Dragdownarrow.png" alt="" class="ms-3">
+                        </a>
+                    </div>
+                    </div>
+                    <div class="col-md-4 col-6  mb-2 mb-md-0 position-relative"> 
+                        <div class="overlay">
+                        <img src="images/Pack4.png" alt="" class="w-100 h-100">
+                        <div class="price">
+                            <div class="from">
+                                from
+                            </div>
+                         $1660
+                        </div>
+                        <p>SPAIN</p>
+                        <a class="MoreDetails">
+                            More Details <img src="images/Dragdownarrow.png" alt="" class="ms-3">
+                        </a>
+                    </div>
+                    </div>
+                    <div class="col-md-4 col-6 position-relative">
+                        <div class="overlay">
+                        <img src="images/Pack5.png" alt="" class="w-100 h-100">
+                        <div class="price">
+                            <div class="from">
+                                from
+                            </div>
+                         $470
+                        </div>
+                        <p>BOSNIA & HERZEGOVINA</p>
+                        <a class="MoreDetails">
+                            More Details <img src="images/Dragdownarrow.png" alt="" class="ms-3">
+                        </a>
+                    </div>
+                    </div>
+                    <div class="col-md-4 col-6 position-relative">
+                        <div class="overlay">
+                        <img src="images/Pack6.png" alt="" class="w-100 h-100">
+                        <div class="price">
+                            <div class="from">
+                                from
+                            </div>
+                         $250
+                        </div>
+                        <p>AZERBAIJAN</p>
+                        <a class="MoreDetails">
+                            More Details <img src="images/Dragdownarrow.png" alt="" class="ms-3">
+                        </a>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+               <!--Informative Slider-->
+      <section class="PackagesCarousel pb-4 PhotoDescription">
+        <div class="container">
+        <h4 class="TitleDescription mb-4 ">
+            CHECKOUT OUR WONDERFULL DESTINATIONS
           </h4>
-          <p class="Description  mb-4">
-            The next step of your trip starts today take a look at 
-            <br>
-            some of our featured destinations for ideas to 
-            <br>
-            add to your bucket list
-          </p>
         </div>
-      </div>
+        <div class="carousel" data-flickity='{ "wrapAround": true }'>
+          <div class="carousel-cell">
+            <img src="" alt="">
+          </div>
+          <div class="carousel-cell">
+            <img src="" alt="">
+          </div>
+          <div class="carousel-cell">
+            <img src="" alt="">
+          </div>
+
+          <div class="carousel-cell">
+            <img src="" alt="">
+          </div>
+
+          <div class="carousel-cell">
+          <img src="" alt="">
+          </div>
 
 
-    <div class="row PackCards">
-        <div class="col-md-4">
-            <img src="images/Pack1.png" alt="" class="w-100 h-100">
-
-        </div>
-        <div class="col-md-4">
-            <img src="images/Pack1.png" alt="" class="w-100 h-100">
-
-        </div>
-        <div class="col-md-4">
-            <img src="images/Pack1.png" alt="" class="w-100 h-100">
-
-        </div>
-        <div class="col-md-4">
-            <img src="images/Pack1.png" alt="" class="w-100 h-100">
 
         </div>
-        <div class="col-md-4">
-            <img src="images/Pack1.png" alt="" class="w-100 h-100">
 
-        </div>
-        <div class="col-md-4">
-            <img src="images/Pack1.png" alt="" class="w-100 h-100">
+      </section>
+      <!--End Informative Slider-->
+        </section>
 
-        </div>
+       <!--Map Part-->
+  <div class="Map p-5" id="Map">
+    <div class="container">
+      <h4 class="TitleDescription mb-4">
+        OUR LOCATIONS <br> AROUND THE WORLD
+    </div>
+    <div class="Spain d-md-block d-none"></div>
+
+    <div class="Dubai d-md-block d-none">
+   
     </div>
 
-</div>
-
-  </section>
-
- <!--Map Part-->
- <div class="Map p-5" id="Map">
-  <div class="container">
-    <h4 class="TitleDescription mb-4">
-      OUR LOCATIONS <br> AROUND THE WORLD
-  </div>
-  <div class="Spain"></div>
-
-  <div class="Dubai">
- 
-  </div>
-
-  <div class="SpainContent Detail">
-    <div class="d-flex mb-2">
-    <img src="images/NIUHotel.svg" alt="" class="w-25 ">
-  </div>
-    <span><i class="fa-solid fa-envelope me-2"></i> reception@niuhotel.com </span>
-    <br>
-    <span><i class="fa-solid fa-phone me-2"></i> +34 936 550 255 </span>
-    <br>
-    <span><i class="fa-solid fa-location-dot me-2"></i>
-      Rambla Del Raval 8
-      08001 Barcelona
-      Barcelona
-      Spain </span>
-  </div>
-  <div class="DubaiContent Detail">
-    <div class="row">
-      <div class="col-12 pe-0">
-        <div class="row">
-        <div class="d-flex mb-2 col-2">
-          <img src="images/DUbaiLink.svg" alt="" class=" mx-auto ">
+    <div class="SpainContent Detail ">
+      <div class="d-flex mb-2">
+      <img src="images/NIUHotel.svg" alt="" class="w-25 ">
+    </div>
+      <span><i class="fa-solid fa-envelope me-2"></i> reception@niuhotel.com </span>
+      <br>
+      <span><i class="fa-solid fa-phone me-2"></i> +34 936 550 255 </span>
+      <br>
+      <span><i class="fa-solid fa-location-dot me-2"></i>
+        Rambla Del Raval 8
+        08001 Barcelona
+        Barcelona
+        Spain </span>
+    </div>
+    <div class="DubaiContent Detail">
+      <div class="row">
+        <div class="col-12 pe-0">
+          <div class="row">
+          <div class="d-flex mb-2 col-2 px-0">
+            <img src="images/DUbaiLink.svg" alt="" class=" mx-auto ">
+          </div>
+          <div class="col-10 ps-4">
+          <span><i class="fa-solid fa-envelope me-2"></i> info@dubailink.ae</span>
+          <br>
+          <span><i class="fa-solid fa-phone me-2"></i>+971 4 448 8111 </span>
+          <br>
+          <span><i class="fa-solid fa-location-dot me-2"></i>
+            20th Floor, HDS Tower, Cluster F, JLT, P.O. Box 450078 Dubai, UAE
+          </span>
         </div>
-        <div class="col-9 ps-4">
-        <span><i class="fa-solid fa-envelope me-2"></i> info@dubailink.ae</span>
-        <br>
-        <span><i class="fa-solid fa-phone me-2"></i>+971 4 448 8111 </span>
-        <br>
-        <span><i class="fa-solid fa-location-dot me-2"></i>
-          20th Floor, HDS Tower, Cluster F, JLT, P.O. Box 450078 Dubai, UAE
-        </span>
-      </div>
-      </div>
-      </div>
-      <div class="col-12 pe-0">
-        <div class="row">
-        <div class="d-flex mb-2 col-2">
-          <img src="images/GTE.svg" alt="" class="w-50 mx-auto">
         </div>
-        <div class="col-9 ps-4">
-        <span><i class="fa-solid fa-envelope me-2"></i> info@gte.travel </span>
-        <br>
-        <span><i class="fa-solid fa-phone me-2"></i> +971 4 448 8111</span>
-        <br>
-        <span><i class="fa-solid fa-location-dot me-2"></i>
-          20th Floor, HDS Tower, Cluster F, JLT, P.O. Box 450078 Dubai, UAE
-        </span>
-      </div>
-      </div>
-      </div>
-      <div class="col-12 pe-0">
-        <div class="row">
-        <div class="d-flex mb-2 col-2">
-          <img src="images/RLF.svg" alt="" class="w-25 mx-auto RLFImg">
         </div>
-        <div class="col-9 ps-4">
-        <span><i class="fa-solid fa-envelope me-2"></i> info@dubailink.ae</span>
-        <br>
-        <span><i class="fa-solid fa-phone me-2"></i>+971 4 448 8111 </span>
-        <br>
-        <span><i class="fa-solid fa-location-dot me-2"></i>
-          20th Floor, HDS Tower, Cluster F, JLT, P.O. Box 450078 Dubai, UAE
-        </span>
-      </div>
+        <div class="col-12 pe-0">
+          <div class="row">
+          <div class="d-flex mb-2 col-2 px-0">
+            <img src="images/GTE.svg" alt="" class="w-50 mx-auto">
+          </div>
+          <div class="col-10 ps-4">
+          <span><i class="fa-solid fa-envelope me-2"></i> info@gte.travel </span>
+          <br>
+          <span><i class="fa-solid fa-phone me-2"></i> +971 4 448 8111</span>
+          <br>
+          <span><i class="fa-solid fa-location-dot me-2"></i>
+            20th Floor, HDS Tower, Cluster F, JLT, P.O. Box 450078 Dubai, UAE
+          </span>
         </div>
-      </div>
-      <div class="col-12 pe-0">
-        <div class="row">
-        <div class="d-flex mb-2 col-2">
-          <img src="images/STS.svg" alt="" class="w-50 mx-auto">
         </div>
-        <div class="col-9 ps-4">
-        <span><i class="fa-solid fa-envelope me-2"></i> sts@dubailink.ae </span>
-        <br>
-        <span><i class="fa-solid fa-phone me-2"></i> +971 4 448 8111 </span>
-        <br>
-        <span><i class="fa-solid fa-location-dot me-2"></i>
-          20th Floor, HDS Tower, Cluster F, JLT, P.O. Box 450078 Dubai, UAE
-        </span>
-      </div>
-      </div>
-      </div>
-      <div class="col-12 pe-0">
-        <div class="row">
-        <div class="d-flex mb-2 col-2">
-          <img src="images/TRIPstick.svg" alt="" class="w-25 mx-auto">
         </div>
-        <div class="col-9 ps-4">
-          <span><i class="fa-solid fa-envelope me-2"></i> info@tripstick.com </span>
+        <div class="col-12 pe-0">
+          <div class="row">
+          <div class="d-flex mb-2 col-2 px-0">
+            <img src="images/RLF.svg" alt="" class="w-25 mx-auto RLFImg">
+          </div>
+          <div class="col-10 ps-4">
+          <span><i class="fa-solid fa-envelope me-2"></i> info@dubailink.ae</span>
+          <br>
+          <span><i class="fa-solid fa-phone me-2"></i>+971 4 448 8111 </span>
+          <br>
+          <span><i class="fa-solid fa-location-dot me-2"></i>
+            20th Floor, HDS Tower, Cluster F, JLT, P.O. Box 450078 Dubai, UAE
+          </span>
+        </div>
+          </div>
+        </div>
+        <div class="col-12 pe-0">
+          <div class="row">
+          <div class="d-flex mb-2 col-2 px-0">
+            <img src="images/STS.svg" alt="" class="w-50 mx-auto">
+          </div>
+          <div class="col-10 ps-4">
+          <span><i class="fa-solid fa-envelope me-2"></i> sts@dubailink.ae </span>
           <br>
           <span><i class="fa-solid fa-phone me-2"></i> +971 4 448 8111 </span>
           <br>
-          <span><i class="fa-solid fa-location-dot me-2"></i> 20th Floor, HDS Tower, Cluster F, JLT, P.O. Box 450078
-            Dubai, UAE </span>
+          <span><i class="fa-solid fa-location-dot me-2"></i>
+            20th Floor, HDS Tower, Cluster F, JLT, P.O. Box 450078 Dubai, UAE
+          </span>
+        </div>
+        </div>
+        </div>
+        <div class="col-12 pe-0">
+          <div class="row">
+          <div class="d-flex mb-2 col-2 px-0">
+            <img src="images/TRIPstick.svg" alt="" class="w-25 mx-auto">
           </div>
-      </div>
-      </div>
-    </div>
-  </div>
-    <!-- 
-      Old Map Details
-      <img src="images/MAP.svg" class="w-75" alt="">
-      <div class="MapIndex0">
-        <img src="images/Component 30 – 1.png" alt="" class="MapIndex">
-
-      </div>
-      <div class="Detail DetailsOne p-4">
-       
-      </div>
-      <div class="MapIndex1">
-        <img src="images/Component 31 – 1.png" alt="" class="MapIndex ">
-      </div>
-      <div class="Detail DetailsTwo p-4">
-        
-      </div>
-      <div class="MapIndex2">
-        <img src="images/Component 32 – 1.png" alt="" class="MapIndex ">
-
-      </div>
-      <div class="Detail DetailsThree p-4">
-        
-      </div>
-      <div class="MapIndex3">
-
-        <img src="images/Component 33 – 1.png" alt="" class="MapIndex ">
-
-
-      </div>
-      <div class="Detail DetailsFour p-4">
-       
-      </div>
-      <div class="MapIndex4">
-        <img src="images/Component 34 – 1.png" alt="" class="MapIndex MapIndex4">
-
-
-      </div>
-      <div class="Detail DetailsFive p-4">
-        
-      </div>
-
-      <div class="MapIndex5">
-        <img src="images/Component 35 – 1.png" alt="" class="MapIndex MapIndex5">
-
-
-      </div>
-      <div class="Detail DetailsSix p-4">
-       
-      </div>
-    </div> -->
-  </div>
-<!--End Map Part-->
-
-<!--NewsLetter Part-->
-<div class="NewsLetter p-md-5 p-3 pb-5">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-5">
-        <h5 class="mt-1">
-          SUBSCRIBE TO OUR NEWSLETTER
-        </h5>
-      </div>
-      <div class="col-md-7">
-        <form class="w-100 ">
-          <div class="EmailInput w-100">
-            <div class="row">
-              <div class="col-md-8">
-                <input type="email" class="form-control w-100 me-0" placeholder="Enter your email…" aria-label="email"
-                  aria-describedby="basic-addon1">
-              </div>
-              <div class="col-md-4 d-flex ">
-                <button type="button" class="btn btn-primary mx-auto">SUBSCRIBE</button>
-              </div>
+          <div class="col-10 ps-4">
+            <span><i class="fa-solid fa-envelope me-2"></i> info@tripstick.com </span>
+            <br>
+            <span><i class="fa-solid fa-phone me-2"></i> +971 4 448 8111 </span>
+            <br>
+            <span><i class="fa-solid fa-location-dot me-2"></i> 20th Floor, HDS Tower, Cluster F, JLT, P.O. Box 450078
+              Dubai, UAE </span>
             </div>
-
-
-        </form>
+        </div>
+        </div>
+        <div class="col-12 pe-0 d-md-block d-none">
+          <div class="row ">
+          <div class="d-flex mb-2 col-2 px-0">
+            <img src="images/NIUHotel.svg" alt="" class="w-25 mx-auto">
+          </div>
+          <div class="col-10 ps-4">
+            <span><i class="fa-solid fa-envelope me-2"></i> reception@niuhotel.com </span>
+            <br>
+            <span><i class="fa-solid fa-phone me-2"></i> +34 936 550 255 </span>
+            <br>
+            <span><i class="fa-solid fa-location-dot me-2"></i>
+              Rambla Del Raval 8
+              08001 Barcelona
+              Barcelona
+              Spain </span>
+            </div>
+        </div>
+        </div>
       </div>
     </div>
+      
+    </div>
+  <!--End Map Part-->
+
+
+        <!--NewsLetter Part-->
+        <div class="NewsLetter p-md-5 p-3 pb-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h5 class="mt-1">
+                            SUBSCRIBE TO OUR NEWSLETTER
+                        </h5>
+                    </div>
+                    <div class="col-md-7">
+                        <form class="w-100 ">
+                            <div class="EmailInput w-100">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <input type="email" class="form-control w-100 me-0"
+                                            placeholder="Enter your email…" aria-label="email"
+                                            aria-describedby="basic-addon1">
+                                    </div>
+                                    <div class="col-md-4 d-flex ">
+                                        <button type="button" class="btn btn-primary ">SUBSCRIBE</button>
+                                    </div>
+                                </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End NewsLetter Part-->
+
+
+ <!--Chat Bot Icon-->
+ <div class="ChatBot">
+    <img src="" alt="">
   </div>
-</div>
-<!--End NewsLetter Part-->
-
-
-
 </body>
 
 <script src="assets/js/jquery-3.6.1.min.js"></script>

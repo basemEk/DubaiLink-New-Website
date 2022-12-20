@@ -48,8 +48,10 @@ body {
     width: 100% !important;
     max-width: 100%;
     background-color: #F8F8F8;
-
-}
+    position: relative;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    }
 
 .GreyBodyBg {
     background-color: #F8F8F8;
@@ -58,14 +60,20 @@ body {
 .WhiteBodyBg {
     background-color: white !important;
 }
+
 .col-12 {
     padding-right: 0 !important;
 }
+
 .GreenText {
     color: #00808B !important;
     font-weight: bolder;
 }
-
+.ChatBot{
+    position:fixed !important;
+  
+   
+}
 /********
 *********
 Navbar
@@ -113,7 +121,7 @@ nav.navbar ul.navbar-nav li.nav-item {
 
 nav.navbar ul.navbar-nav li.nav-item a.nav-link {
     color: white;
-    font-size: 11x;
+    font-size: 12px;
     line-height: 22px;
     text-transform: uppercase;
     font-weight: 100;
@@ -166,6 +174,7 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .overlay {
     position: relative;
 
 }
+
 section.SmallTexts .carousel .carousel-inner .carousel-item .overlay {
     align-items: end;
     padding-bottom: 70px;
@@ -279,19 +288,25 @@ section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption 
     z-index: 1;
     overflow: hidden;
     box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, .25);
-} 
+}
+
 section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption::before {
     content: "";
     position: absolute;
-    top: -15px; /* -blur */ 
-    left: -15px; /* -blur */
-    width: calc(100% + 16px); /* 100% + blur * 2 */
-    height: calc(100% + 16px); /* 100% + blur * 2 */
-    background-image: linear-gradient(#00000080, rgba(0, 0, 0, 0.5)); /* change color or image here */
+    top: -15px;
+    /* -blur */
+    left: -15px;
+    /* -blur */
+    width: calc(100% + 16px);
+    /* 100% + blur * 2 */
+    height: calc(100% + 16px);
+    /* 100% + blur * 2 */
+    background-image: linear-gradient(#00000080, rgba(0, 0, 0, 0.5));
+    /* change color or image here */
     background-position: 50%;
     filter: blur(8px);
     z-index: -1;
-  }
+}
 
 section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption p {
     font-size: 14px;
@@ -475,7 +490,7 @@ section.LandingPage .PhotoDescription h4.TitleDescription, .Map h4.TitleDescript
 }
 
 section.LandingPage .PhotoDescription img {
-    opacity: 0 ;
+    opacity: 0;
 }
 
 .animated {
@@ -625,7 +640,7 @@ section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails p {
     position: relative;
     width: 100%;
     height: 100%;
-    background-image: url(../images/MAP.svg); 
+    background-image: url(../images/MAP.svg);
     background-size: cover;
     background-position: right top;
 
@@ -635,14 +650,15 @@ section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails p {
 
 .Map h4.TitleDescription {
     color: white !important;
-    text-align:  center !important;
+    text-align: center !important;
     text-shadow: 1px 4px 6px rgba(0, 0, 0, 0.877);
     position: absolute;
     top: 5%;
     right: 5%;
-    
+
 }
-.Map .Spain,.Map .Dubai{
+
+.Map .Spain, .Map .Dubai {
     width: 400px;
     height: 200px;
     position: absolute;
@@ -652,12 +668,13 @@ section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails p {
     left: 30%;
     opacity: 0;
 }
-.Map .Dubai{
+
+.Map .Dubai {
     top: 50%;
     left: unset;
     right: 10%;
     transform: translateY(-50%);
- 
+
 
 }
 
@@ -673,37 +690,45 @@ section.LandingPage .infromativeSlider .carousel-cell a.MoreDetails p {
     width: 400px;
     height: fit-content;
     font-weight: bold;
-    padding: 20px;   
+    padding: 20px;
 }
 
 .Detail svg {
     color: #000000;
     font-size: 16px;
 }
-.SpainContent{
+
+.SpainContent {
     display: none;
     position: absolute;
-    bottom: 5%;
-    left: 10%;
+    top: 45%;
+    left: 30%;
+    transform: translate(-50%, -50%);
 }
-.DubaiContent{
+
+.DubaiContent {
     font-size: 14px !important;
     line-height: 19px;
     position: absolute;
-    bottom: 5%;
-    left: 10%;
+    top: 65%;
+    right: 35%;
     width: 40%;
     display: none;
+    transform: translateY(-50%);
 }
-.DubaiContent .col-12{
+
+.DubaiContent .col-12 {
     margin-bottom: 20px;
 }
-.DubaiContent img{
+
+.DubaiContent img {
     width: 50% !important;
 }
-.DubaiContent .RLFImg{
+
+.DubaiContent .RLFImg {
     width: 25% !important;
 }
+
 /*End  Map Part */
 
 /*Newsletter*/
@@ -868,16 +893,18 @@ End Dubai Link
 About Page
 *********
 **********/
-section.CarouselPart #AboutCarousel .carousel-inner .carousel-item, section.CarouselPart #STSCarousel .carousel-inner .carousel-item, section.CarouselPart #TravelCarousel .carousel-inner .carousel-item, section.CarouselPart #Hospitality .carousel-inner .carousel-item, section.CarouselPart #DestinationRep .carousel-inner .carousel-item,section.CarouselPart #Royal .carousel-inner .carousel-item,section.CarouselPart #PackageMain .carousel-inner .carousel-item {
+section.CarouselPart #AboutCarousel .carousel-inner .carousel-item, section.CarouselPart #STSCarousel .carousel-inner .carousel-item, section.CarouselPart #TravelCarousel .carousel-inner .carousel-item, section.CarouselPart #Hospitality .carousel-inner .carousel-item, section.CarouselPart #DestinationRep .carousel-inner .carousel-item, section.CarouselPart #Royal .carousel-inner .carousel-item, section.CarouselPart #PackageMain .carousel-inner .carousel-item {
     height: 100vh;
 }
 
-section.CarouselPart #AboutCarousel .carousel-inner .carousel-item .overlay, section.CarouselPart #STSCarousel .carousel-inner .carousel-item .overlay, section.CarouselPart #TravelCarousel .carousel-inner .carousel-item .overlay, section.CarouselPart #Hospitality .carousel-inner .carousel-item .overlay, section.CarouselPart #DestinationRep .carousel-inner .carousel-item .overlay,section.CarouselPart #Royal .carousel-inner .carousel-item .overlay,section.CarouselPart #PackageMain .carousel-inner .carousel-item .overlay {
+section.CarouselPart #AboutCarousel .carousel-inner .carousel-item .overlay, section.CarouselPart #STSCarousel .carousel-inner .carousel-item .overlay, section.CarouselPart #TravelCarousel .carousel-inner .carousel-item .overlay, section.CarouselPart #Hospitality .carousel-inner .carousel-item .overlay, section.CarouselPart #DestinationRep .carousel-inner .carousel-item .overlay, section.CarouselPart #Royal .carousel-inner .carousel-item .overlay, section.CarouselPart #PackageMain .carousel-inner .carousel-item .overlay {
     height: 100%;
 }
-section.CarouselPart #PackageMain #carousel-item-one{
+
+section.CarouselPart #PackageMain #carousel-item-one {
     background-image: url(../images/Packagesbanner.png);
 }
+
 section.CarouselPart #AboutCarousel #carousel-item-one {
     background-image: url(../images/Aboutbanner.png);
 }
@@ -900,10 +927,12 @@ section.CarouselPart #DestinationRep #carousel-item-one {
     background-image: url(../images/One.png);
 
 }
+
 section.CarouselPart #Royal #carousel-item-one {
     background-image: url(../images/Royallifestyle.png);
 
 }
+
 section.CarouselPart #Carousel #carousel-item-one {}
 
 .infromativeSliderAbout {
@@ -1095,26 +1124,32 @@ section.STS .card {
     flex-direction: column;
     justify-content: center;
 }
+
 .NavTabs {
     justify-content: space-between;
     border: none;
 }
+
 .NavTabs .nav-item .nav-link {
     font-size: 40px !important;
     color: #00808B !important;
     box-shadow: none !important;
 }
-.NavTabs .nav-item .nav-link.active{
+
+.NavTabs .nav-item .nav-link.active {
     font-weight: bolder;
-  
+
 }
-.NavTabs .nav-item .nav-link.active, .nav-item .nav-item.show .nav-link{
+
+.NavTabs .nav-item .nav-link.active, .nav-item .nav-item.show .nav-link {
     border: none !important;
 }
- .tab-content{
+
+.tab-content {
     text-align: center;
     border-top: none !important;
-} 
+}
+
 /*********
 End STS 
 ***********/
@@ -1175,18 +1210,81 @@ End NIU
 /******
 Packages
 ********/
-.PackCards img{
-
+.PackCards {
+    position: relative;
 }
 
+.PackCards .price {
+    width: 75px;
+    height: 75px;
+    background-color: #00808B;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    color: white;
+
+    font-weight: bold;
+    position: absolute;
+    top: 2%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    filter: drop-shadow(1px 3px 6px rgba(0, 0, 0, 0.26));
+}
+
+.PackCards .MoreDetails {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    font-size: 20px;
+    line-height: 27px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.PackCards .overlay img{
+    transition: 0.5s ease all;
+
+}
+.PackCards .overlay:hover img {
+    filter: brightness(80%);
+}
+
+.PackCards .MoreDetails img {
+    width: 0px;
+    transition: 0.5s ease all;
+}
+
+.PackCards .overlay:hover .MoreDetails img {
+    width: 35px;
+}
+
+.PackCards .price .from {
+    font-weight: 100;
+}
+
+.PackCards p {
+    font-size: 24px;
+    line-height: 32px;
+    color: #313131;
+    margin-bottom: 35px;
+    padding-left: 10px;
+    transition: 0.5s ease all;
+
+}
+.PackCards .overlay:hover p{
+    font-weight: bolder;
+    color: #00808B;
+} 
 
 /***************************
 ************Media *********
 ****************************/
 @media (min-width: 2000px) {
-    .Map {
-    }
+    .Map {}
 }
+
 @media (min-width: 991px) {}
 
 @media (max-width:767px) {}
@@ -1198,6 +1296,10 @@ Packages
         line-height: 40px;
     }
 
+    .SpainContent {
+        margin-top: 100px;
+        display: none !important;
+    }
     section.CarouselPart .carousel .carousel-inner .carousel-item .carouselImageText p {
         font-size: 17px;
         margin-left: 20px;
@@ -1261,7 +1363,7 @@ Packages
     }
 
     nav.navbar ul.navbar-nav li.nav-item a.nav-link {
-        font-size: 13px;
+        font-size: 20px;
         line-height: 30px;
         opacity: 100%;
         margin-bottom: 20px;
@@ -1368,14 +1470,15 @@ Packages
     }
 
     #TextCarousel .carousel-item, #TextCarouselNIU .carousel-item {
-        height: 300px;
+        height: fit-content;
         text-align: center;
         padding: 5px;
-        filter:unset;
+        filter: unset;
         background-color: transparent;
         margin-top: 15px;
 
     }
+
     #carouselDubai .carousel-item img, #TextCarousel .carousel-item img, #carouselNIU .carousel-item img, #TextCarouselNIU .carousel-item img {
         width: 70%;
         margin: auto;
@@ -1399,74 +1502,148 @@ Packages
 
         top: 85%;
     }
+
     section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails p {
-    font-size: 13px;
-    margin-bottom: 10px;
+        font-size: 13px;
+        margin-bottom: 10px;
     }
+
     section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails button div {
         width: 20px;
         height: 20px;
     }
+
     section.LandingPage .infromativeSlider .carousel-cell:hover a.MoreDetails button div svg {
         font-size: 12px;
     }
-    .infromativeSliderAbout .carousel-cell{
+
+    .infromativeSliderAbout .carousel-cell {
         width: 66%;
     }
-    .infromativeSliderAbout .card .card-body .card-title{
+
+    .infromativeSliderAbout .card .card-body .card-title {
         font-size: 20px;
-        
+
     }
-    .infromativeSliderAbout .card .card-body .card-text{
+
+    .infromativeSliderAbout .card .card-body .card-text {
         font-size: 16px;
         line-height: 29px;
     }
+
     .infromativeSliderAbout .card .card-body {
         height: 160px;
     }
-    section.LeaderShipCarousel .carousel-cell{
+
+    section.LeaderShipCarousel .carousel-cell {
         width: 66%;
     }
+
     section.LeaderShipCarousel .carousel-cell .card .card-body {
         padding: 15px !important;
     }
+
     section.LeaderShipCarousel .carousel-cell .card .card-body .card-title {
-    font-size: 20px;
+        font-size: 20px;
     }
+
     section.LeaderShipCarousel .carousel-cell .card .card-body .card-text {
-    font-size: 15px;
-    margin-bottom: 0;
+        font-size: 15px;
+        margin-bottom: 0;
     }
+
     .NavSocial {
         margin-top: 10px !important;
     }
+
     section.LeaderShipCarousel .carousel-cell .card {
         padding: 10px;
     }
-    .BanerLink.PhotoDescription p.Description{
+
+    .BanerLink.PhotoDescription p.Description {
         text-align: left !important;
 
     }
-    .BanerLink.PhotoDescription p.Description img{
+
+    .BanerLink.PhotoDescription p.Description img {
         filter: brightness(100%) invert(0%) !important;
         display: inline-block;
     }
-    section.Royale .infromativeSliderAbout .card .card-body .card-text,section.GTE .infromativeSliderAbout .card .card-body .card-text{
+
+    section.Royale .infromativeSliderAbout .card .card-body .card-text, section.GTE .infromativeSliderAbout .card .card-body .card-text {
         font-size: 15px;
         line-height: 20px;
     }
+
     .PhotoDescription p.Description img {
         display: none;
     }
-    section.Tripstik .PhotoDescription .card .card-title{
+
+    section.Tripstik .PhotoDescription .card .card-title {
         font-size: 45px;
         line-height: 60px;
     }
-    section.Tripstik .PhotoDescription .card .card-text,section.Tripstik .PhotoDescription .card .card-details{
+
+    section.Tripstik .PhotoDescription .card .card-text, section.Tripstik .PhotoDescription .card .card-details {
         font-size: 12px;
         line-height: 16px;
     }
-    section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption{
+
+    section.CarouselPart .carousel .carousel-inner .carousel-item .carousel-caption {
         width: 35%;
+    }
+
+    .Map h4.TitleDescription {
+        top: 13%;
+    }
+
+    .Map {
+        background-size: contain;
+        height: unset;
+    }
+
+    .Detail {
+        display: block;
+        position: unset;
+        transform: unset;
+        width: 100% !important;
+        font-size: 11px !important;
+    }
+
+
+    .DubaiContent {
+        margin-top: 170px;
+
+    }
+
+    .DubaiContent img {
+        width: 100% !important;
+    }
+
+    .PackCards .price {
+        width: 40px;
+        height: 40px;
+        font-size: 11px;
+    }
+    .PackCards p{
+        font-size: 11px;
+    }
+    .PackCards .MoreDetails {
+        top: 55%;
+        left: 13%;
+        font-size: 14px;
+    }
+    .PackCards .overlay:hover .MoreDetails img{
+        width: 25px;
+    }
+    .row{
+        margin:  0 !important;
+    }
+    section.SmallTexts .carousel .carousel-inner .carousel-item .overlay{
+        align-items: center;
+        padding-bottom: 0;
+    }
+    .DubaiContent .RLFImg{
+        width: 100% !important;
     }
 }
