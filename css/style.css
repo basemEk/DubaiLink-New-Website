@@ -1261,10 +1261,11 @@ Packages
     }
 
     nav.navbar ul.navbar-nav li.nav-item a.nav-link {
-        font-size: 14px;
+        font-size: 13px;
         line-height: 30px;
         opacity: 100%;
         margin-bottom: 20px;
+
     }
 
     section.LandingPage .PhotoDescription h4.TitleDescription, .Map h4.TitleDescription, section.DubaiLink .PhotoDescription h4.TitleDescription, section.DubaiLink .PhotoDescriptionNoAnim h4.TitleDescription {
