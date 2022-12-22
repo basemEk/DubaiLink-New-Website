@@ -1428,7 +1428,7 @@ footer .NavSocial {
     }
 
     section.SmallTexts .carousel .carousel-inner .carousel-item .carouselImageText p {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 22px;
     }
 
@@ -1696,5 +1696,12 @@ footer .NavSocial {
     }
     .DubaiContent .RLFImg{
         width: 50% !important;
+    }
+    footer.footer .FooterText a, footer.footer .FooterText, footer.footer {
+        flex-direction: column;
+        justify-content: center !important;
+    }
+    footer.footer .footerImg{
+        width: 30%;
     }
 }
