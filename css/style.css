@@ -1697,6 +1697,16 @@ footer .NavSocial {
     .DubaiContent .RLFImg{
         width: 50% !important;
     }
+    .whiteborder{
+        border: none;
+    }
+  
+    footer .d-flex {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-around !important;
+        align-items: center !important;
+    }
     footer.footer .FooterText a, footer.footer .FooterText, footer.footer {
         flex-direction: column;
         justify-content: center !important;
