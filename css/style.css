@@ -1205,6 +1205,15 @@ End NIU
 /******
 Packages
 ********/
+
+.PackagesCarousel .carousel-cell{
+    Width:33%;
+   }
+   
+   .PackagesCarousel img {
+   Width:100%;
+   }
+   
 .PackCards {
     position: relative;
 }
